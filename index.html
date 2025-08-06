@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Selamat Ulang Tahun!</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    html, body {
+      height: 100%;
+      width: 100%;
+    }
+
+    body {
+      background-image: url('https://png.pngtree.com/thumb_back/fw800/background/20220216/pngtree-birthday-background-picture-image_935043.jpg');
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      transition: filter 0.5s ease;
+    }
+
+    .overlay {
+      background-color: rgba(0, 0, 0, 0.5);
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding: 20px;
+    }
+
+    .overlay h1 {
+      color: #fff;
+      font-size: 2em;
+      margin-bottom: 15px;
+    }
+
+    .overlay p {
+      color: #f0f0f0;
+      font-size: 1em;
+      margin-bottom: 30px;
+      line-height: 1.5;
+    }
+
+    .btn {
+      padding: 12px 24px;
+      font-size: 1em;
+      background-color: #fff;
+      color: #333;
+      border: none;
+      border-radius: 30px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+
+    .btn:hover {
+      background-color: #ffd700;
+    }
+
+    #videoContainer {
+      display: none;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      background-color: #000;
+      padding: 10px;
+    }
+
+    video {
+      width: 100%;
+      max-width: 480px;
+      border-radius: 20px;
+    }
+
+    @media (max-width: 480px) {
+      .overlay h1 {
+        font-size: 1.8em;
+      }
+
+      .overlay p {
+        font-size: 0.95em;
+      }
+
+      .btn {
+        padding: 10px 20px;
+        font-size: 0.95em;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="overlay" id="greeting">
+    <h1>Hbd Ci (Meta Citra Amanda)!!! 🎉</h1>
+    <p>Semoga yang lu semogakan akan segera tersemogakan. awkowakoawwk,MAKIN TUA!!!</p>
+    <button class="btn" onclick="showVideo()">Berikutnya</button>
+  </div>
+
+  <div id="videoContainer">
+    <video id="birthdayVideo" controls autoplay>
+      <source src="VID-20250806-WA0018.mp4" type="video/mp4" />
+      Maaf, browser kamu tidak mendukung pemutaran video.
+    </video>
+  </div>
+
+  <script>
+    function showVideo() {
+      document.getElementById('greeting').style.display = 'none';
+      document.getElementById('videoContainer').style.display = 'flex';
+      document.getElementById('birthdayVideo').play();
+    }
+  </script>
+</body>
+</html>
